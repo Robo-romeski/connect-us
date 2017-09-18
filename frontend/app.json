@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "sdkVersion": "15.0.0",
+    "icon": "./images/icon.png",
+    "slug": "native-starterpro-backend",
+    "loading": {
+      "hideExponentText": true,
+      "icon": "./images/loading.png",
+      "backgroundImage": "./images/launchscreen.png"
+    },
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ]
+    },
+    "ios": {
+    "bundleIdentifier": "io.market.nativebase.geekyants.nativestarterpro-backend"
+  },
+  "android": {
+     "package": "io.market.nativebase.geekyants.nativestarterpro_backend"
+   },
+   "androidStatusBarColor": "#01cca1",
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#01cca1"
+    }
+  }
+}
