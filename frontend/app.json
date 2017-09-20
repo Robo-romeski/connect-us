@@ -21,10 +21,10 @@
   "android": {
      "package": "io.market.nativebase.geekyants.nativestarterpro_backend"
    },
-   "androidStatusBarColor": "#01cca1",
+   "androidStatusBarColor": "#ffff00",
     "androidStatusBar": {
       "barStyle": "dark-content",
-      "backgroundColor": "#01cca1"
+      "backgroundColor": "#ffff00"
     }
   }
 }

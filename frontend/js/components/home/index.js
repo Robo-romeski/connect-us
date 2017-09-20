@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Content, Button,Thumbnail, Icon, Text,Left, Body, Right } from 'native-base';
+import { Container, Header, Title, Content, Button,Thumbnail, Icon, Text,Left, Body, Right, Footer, FooterTab, Card, CardItem, Badge } from 'native-base';
 import { Image, View, Platform, BackAndroid } from 'react-native';
 import { observer } from 'mobx-react/native';
 import { Actions } from 'react-native-router-flux';
@@ -45,10 +45,18 @@ class Home extends Component { // eslint-disable-line
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
               <View>
                 <Text>
-                   User email: {AuthStore.user.email}
+                   Welcome {AuthStore.user.email}!
                 </Text>
               </View>
               <View style={{ marginTop: 20 }}>
+
+              <Card>
+                <CardItem>
+                <Text>
+                The Status Board
+                </Text>
+                </CardItem>
+              </Card>
                 <Button
                   transparent
                   large
@@ -61,6 +69,26 @@ class Home extends Component { // eslint-disable-line
             </View>
           </Content>
         </Thumbnail>
+        <Footer>
+                  <FooterTab>
+                    <Button vertical>
+                      <Icon name="apps" />
+                      <Text>Apps</Text>
+                    </Button>
+                    <Button vertical>
+                      <Icon name="camera" />
+                      <Text>Camera</Text>
+                    </Button>
+                    <Button vertical active>
+                      <Icon active name="navigate" />
+                      <Text>Navigate</Text>
+                    </Button>
+                    <Button vertical>
+                      <Icon name="person" />
+                      <Text>Contact</Text>
+                    </Button>
+                  </FooterTab>
+                </Footer>
       </Container>
         );
   }

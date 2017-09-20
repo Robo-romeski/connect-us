@@ -47,8 +47,8 @@ module.exports = {
     return this.fontSizeBase * 3.8;
   },
 
-  footerHeight: 55,
-  toolbarHeight: (Platform.OS === 'ios') ? 70 : 55,
+  footerHeight: 65,
+  toolbarHeight: (Platform.OS === 'ios') ? 70 : 85,
   toolbarDefaultBg: '#00c497',
   toolbarInverseBg: '#222',
 
