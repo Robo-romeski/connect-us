@@ -53,20 +53,30 @@ var Home = (0, _native.observer)(_class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var person = {
+        name: "Jerome O. Moore",
+        address: "928 Elton St.",
+        city: "Brooklyn",
+        state: "New York",
+        zipcode: 11208,
+        phone: "(347)788-8436",
+        employer: "RomeCode Inc.",
+        position: "Design Specialist"
+      };
 
       console.log(_AppViewStore2.default.drawerOpened);
       return _react2.default.createElement(
         _nativeBase.Container,
         { theme: _baseTheme2.default, style: { backgroundColor: '#384850' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 36
           }
         },
         _react2.default.createElement(
           _nativeBase.Thumbnail,
           { square: true, source: backgroundImage, style: _styles2.default.container, __source: {
               fileName: _jsxFileName,
-              lineNumber: 27
+              lineNumber: 37
             }
           },
           _react2.default.createElement(
@@ -74,7 +84,7 @@ var Home = (0, _native.observer)(_class = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 28
+                lineNumber: 38
               }
             },
             _react2.default.createElement(
@@ -82,20 +92,20 @@ var Home = (0, _native.observer)(_class = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 29
+                  lineNumber: 39
                 }
               },
               _react2.default.createElement(
                 _nativeBase.Button,
                 { transparent: true, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 30
+                    lineNumber: 40
                   }
                 },
                 _react2.default.createElement(_nativeBase.Text, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 31
+                    lineNumber: 41
                   }
                 })
               )
@@ -105,7 +115,7 @@ var Home = (0, _native.observer)(_class = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 34
+                  lineNumber: 44
                 }
               },
               _react2.default.createElement(
@@ -113,10 +123,10 @@ var Home = (0, _native.observer)(_class = function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 35
+                    lineNumber: 45
                   }
                 },
-                'Dashboard'
+                'Home'
               )
             ),
             _react2.default.createElement(
@@ -124,7 +134,7 @@ var Home = (0, _native.observer)(_class = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 37
+                  lineNumber: 47
                 }
               },
               _react2.default.createElement(
@@ -133,12 +143,12 @@ var Home = (0, _native.observer)(_class = function (_Component) {
                     _AppViewStore2.default.drawerOpened = true;
                   }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 38
+                    lineNumber: 48
                   }
                 },
                 _react2.default.createElement(_nativeBase.Icon, { active: true, name: 'menu', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 39
+                    lineNumber: 49
                   }
                 })
               )
@@ -148,91 +158,150 @@ var Home = (0, _native.observer)(_class = function (_Component) {
             _nativeBase.Content,
             { style: { backgroundColor: 'transparent' }, padder: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 44
+                lineNumber: 54
               }
             },
             _react2.default.createElement(
               _reactNative.View,
-              { style: { flex: 1, justifyContent: 'center', alignItems: 'center' }, __source: {
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 45
+                  lineNumber: 56
                 }
               },
               _react2.default.createElement(
-                _reactNative.View,
+                _nativeBase.Card,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 46
+                    lineNumber: 57
+                  }
+                },
+                _react2.default.createElement(
+                  _nativeBase.CardItem,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 58
+                    }
+                  },
+                  _react2.default.createElement(
+                    _nativeBase.Left,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 59
+                      }
+                    },
+                    _react2.default.createElement(_nativeBase.Thumbnail, { style: { paddingTop: '2%' },
+                      source: { uri: 'http://via.placeholder.com/100x100' }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 60
+                      }
+                    }),
+                    _react2.default.createElement(
+                      _nativeBase.Body,
+                      { style: { paddingLeft: '2%' }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 63
+                        }
+                      },
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { style: _styles2.default.heading, note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 64
+                          }
+                        },
+                        person.name
+                      ),
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { style: _styles2.default.heading, note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 65
+                          }
+                        },
+                        person.employer
+                      ),
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { style: _styles2.default.position, note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 66
+                          }
+                        },
+                        person.position
+                      ),
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 67
+                          }
+                        },
+                        person.address
+                      ),
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 68
+                          }
+                        },
+                        person.city,
+                        ', ',
+                        person.state,
+                        ' ',
+                        person.zipcode
+                      ),
+                      _react2.default.createElement(
+                        _nativeBase.Text,
+                        { note: true, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 69
+                          }
+                        },
+                        person.phone
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _nativeBase.Button,
+                    { style: _styles2.default.editCard, transparent: true, warning: true,
+                      onPress: function onPress() {
+                        _reactNativeRouterFlux.Actions.editCard();
+                      }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 72
+                      }
+                    },
+                    _react2.default.createElement(_nativeBase.Icon, { name: 'paper', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 78
+                      }
+                    })
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _nativeBase.Button,
+                { transparent: true, style: _styles2.default.actionButton,
+                  onPress: function onPress() {
+                    _reactNativeRouterFlux.Actions.contacts();
+                  }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 83
                   }
                 },
                 _react2.default.createElement(
                   _nativeBase.Text,
-                  {
-                    __source: {
+                  { style: _styles2.default.textOnBack, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 47
+                      lineNumber: 89
                     }
                   },
-                  'Welcome ',
-                  _AuthStore2.default.user.email,
-                  '!'
-                )
-              ),
-              _react2.default.createElement(
-                _reactNative.View,
-                { style: { marginTop: 20 }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 51
-                  }
-                },
-                _react2.default.createElement(
-                  _nativeBase.Card,
-                  {
-                    __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 53
-                    }
-                  },
-                  _react2.default.createElement(
-                    _nativeBase.CardItem,
-                    {
-                      __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 54
-                      }
-                    },
-                    _react2.default.createElement(
-                      _nativeBase.Text,
-                      {
-                        __source: {
-                          fileName: _jsxFileName,
-                          lineNumber: 55
-                        }
-                      },
-                      'The Status Board'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  _nativeBase.Button,
-                  {
-                    transparent: true,
-                    large: true,
-                    style: _styles2.default.roundedButton,
-                    onPress: function onPress() {
-                      return _AuthStore2.default.unsetUser();
-                    },
-                    __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 60
-                    }
-                  },
-                  _react2.default.createElement(_nativeBase.Icon, { name: 'close', style: { fontSize: _reactNative.Platform.OS === 'ios' ? 50 : 40, color: '#fff' }, __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 66
-                    }
-                  })
+                  'Contacts'
                 )
               )
             )
@@ -243,7 +312,7 @@ var Home = (0, _native.observer)(_class = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 72
+              lineNumber: 96
             }
           },
           _react2.default.createElement(
@@ -251,19 +320,22 @@ var Home = (0, _native.observer)(_class = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 73
+                lineNumber: 97
               }
             },
             _react2.default.createElement(
               _nativeBase.Button,
-              { vertical: true, __source: {
+              { vertical: true,
+                onPress: function onPress() {
+                  _reactNativeRouterFlux.Actions.profiles();
+                }, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 74
+                  lineNumber: 98
                 }
               },
-              _react2.default.createElement(_nativeBase.Icon, { name: 'apps', __source: {
+              _react2.default.createElement(_nativeBase.Icon, { name: 'contact', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 75
+                  lineNumber: 104
                 }
               }),
               _react2.default.createElement(
@@ -271,45 +343,22 @@ var Home = (0, _native.observer)(_class = function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 76
+                    lineNumber: 105
                   }
                 },
-                'Apps'
-              )
-            ),
-            _react2.default.createElement(
-              _nativeBase.Button,
-              { vertical: true, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 78
-                }
-              },
-              _react2.default.createElement(_nativeBase.Icon, { name: 'camera', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 79
-                }
-              }),
-              _react2.default.createElement(
-                _nativeBase.Text,
-                {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 80
-                  }
-                },
-                'Camera'
+                'Profiles'
               )
             ),
             _react2.default.createElement(
               _nativeBase.Button,
               { vertical: true, active: true, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 82
+                  lineNumber: 107
                 }
               },
               _react2.default.createElement(_nativeBase.Icon, { active: true, name: 'navigate', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 83
+                  lineNumber: 108
                 }
               }),
               _react2.default.createElement(
@@ -317,22 +366,22 @@ var Home = (0, _native.observer)(_class = function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 84
+                    lineNumber: 109
                   }
                 },
-                'Navigate'
+                'Local'
               )
             ),
             _react2.default.createElement(
               _nativeBase.Button,
               { vertical: true, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 86
+                  lineNumber: 111
                 }
               },
-              _react2.default.createElement(_nativeBase.Icon, { name: 'person', __source: {
+              _react2.default.createElement(_nativeBase.Icon, { name: 'settings', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 87
+                  lineNumber: 112
                 }
               }),
               _react2.default.createElement(
@@ -340,10 +389,10 @@ var Home = (0, _native.observer)(_class = function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 88
+                    lineNumber: 113
                   }
                 },
-                'Contact'
+                'Settings'
               )
             )
           )

@@ -7,6 +7,8 @@ import styles from './style';
 
 import AppViewStore from '../../stores/ViewStore/AppViewStore.js';
 
+import AuthStore from '../../stores/EntityStore/AuthStore.js';
+
 const logo = require('../../../images/icon2.png');
 
 class SideBar extends Component { // eslint-disable-line
@@ -49,6 +51,24 @@ class SideBar extends Component { // eslint-disable-line
             </Left>
             <Body>
                <Text>Blank Page</Text>
+            </Body>
+            <Right />
+          </ListItem>
+          <ListItem
+            button
+            onPress={
+              () => {
+                AppViewStore.drawerOpened = false;
+                AuthStore.unsetUser();
+              }
+            }
+            icon style={styles.links}
+          >
+            <Left>
+               <Icon active name="exit" />
+            </Left>
+            <Body>
+               <Text>Log Out</Text>
             </Body>
             <Right />
           </ListItem>

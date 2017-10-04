@@ -20,6 +20,16 @@ class Home extends Component { // eslint-disable-line
   });
   }
   render() { // eslint-disable-line class-methods-use-this
+    let person = {
+      name: "Jerome O. Moore",
+      address: "928 Elton St.",
+      city: "Brooklyn",
+      state: "New York",
+      zipcode: 11208,
+      phone: "(347)788-8436",
+      employer: "RomeCode Inc.",
+      position: "Design Specialist"
+    };
 
     console.log(AppViewStore.drawerOpened);
     return (
@@ -32,7 +42,7 @@ class Home extends Component { // eslint-disable-line
                 </Button>
               </Left>
               <Body>
-                 <Title>Dashboard</Title>
+                 <Title>Home</Title>
               </Body>
               <Right>
                 <Button transparent onPress={() => { AppViewStore.drawerOpened = true; }}>
@@ -42,50 +52,65 @@ class Home extends Component { // eslint-disable-line
           </Header>
 
           <Content style={{ backgroundColor: 'transparent' }} padder>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <View>
-                <Text>
-                   Welcome {AuthStore.user.email}!
-                </Text>
-              </View>
-              <View style={{ marginTop: 20 }}>
 
+              <View>
               <Card>
-                <CardItem>
-                <Text>
-                The Status Board
-                </Text>
-                </CardItem>
-              </Card>
-                <Button
-                  transparent
-                  large
-                  style={styles.roundedButton}
-                  onPress={() => AuthStore.unsetUser()}
-                >
-                  <Icon name="close" style={{ fontSize: (Platform.OS === 'ios') ? 50 : 40, color: '#fff' }} />
-                </Button>
+            <CardItem>
+              <Left>
+                <Thumbnail style={{paddingTop: '2%'}}
+                source={{uri: 'http://via.placeholder.com/100x100'}} />
+
+                <Body style={{paddingLeft:'2%'}}>
+                  <Text style={styles.heading} note>{person.name}</Text>
+                  <Text style={styles.heading} note>{person.employer}</Text>
+                  <Text style={styles.position} note>{person.position}</Text>
+                  <Text note>{person.address}</Text>
+                  <Text note>{person.city}, {person.state} {person.zipcode}</Text>
+                  <Text note>{person.phone}</Text>
+                </Body>
+              </Left>
+              <Button style={styles.editCard} transparent warning
+              onPress={
+                () => {
+                  Actions.editCard();
+                }
+              }>
+              <Icon name="paper"/>
+              </Button>
+            </CardItem>
+            </Card>
+
+            <Button transparent style={styles.actionButton}
+            onPress={
+              () => {
+              Actions.contacts();
+              }
+            }>
+            <Text style={styles.textOnBack}>Contacts</Text>
+            </Button>
+
               </View>
-            </View>
+
           </Content>
         </Thumbnail>
         <Footer>
                   <FooterTab>
-                    <Button vertical>
-                      <Icon name="apps" />
-                      <Text>Apps</Text>
-                    </Button>
-                    <Button vertical>
-                      <Icon name="camera" />
-                      <Text>Camera</Text>
+                    <Button vertical
+                    onPress={
+                      () => {
+                        Actions.profiles();
+                      }
+                    }>
+                      <Icon name="contact" />
+                      <Text>Profiles</Text>
                     </Button>
                     <Button vertical active>
                       <Icon active name="navigate" />
-                      <Text>Navigate</Text>
+                      <Text>Local</Text>
                     </Button>
                     <Button vertical>
-                      <Icon name="person" />
-                      <Text>Contact</Text>
+                      <Icon name="settings" />
+                      <Text>Settings</Text>
                     </Button>
                   </FooterTab>
                 </Footer>

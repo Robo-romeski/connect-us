@@ -19,6 +19,10 @@ var _AppViewStore = require('../../stores/ViewStore/AppViewStore.js');
 
 var _AppViewStore2 = babelHelpers.interopRequireDefault(_AppViewStore);
 
+var _AuthStore = require('../../stores/EntityStore/AuthStore.js');
+
+var _AuthStore2 = babelHelpers.interopRequireDefault(_AuthStore);
+
 var logo = require('../../../images/icon2.png');
 
 var SideBar = function (_Component) {
@@ -36,12 +40,12 @@ var SideBar = function (_Component) {
         _nativeBase.Content,
         { style: { backgroundColor: '#252A30' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 17
           }
         },
         _react2.default.createElement(_nativeBase.Thumbnail, { style: { alignSelf: 'center', width: 200, height: 200, marginTop: 20, marginBottom: 15, resizeMode: 'contain' }, circular: true, source: logo, __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 18
           }
         }),
         _react2.default.createElement(
@@ -57,7 +61,7 @@ var SideBar = function (_Component) {
             icon: true, style: _style2.default.links,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 17
+              lineNumber: 19
             }
           },
           _react2.default.createElement(
@@ -65,12 +69,12 @@ var SideBar = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 29
+                lineNumber: 31
               }
             },
             _react2.default.createElement(_nativeBase.Icon, { active: true, name: 'home', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 30
+                lineNumber: 32
               }
             })
           ),
@@ -79,7 +83,7 @@ var SideBar = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 32
+                lineNumber: 34
               }
             },
             _react2.default.createElement(
@@ -87,7 +91,7 @@ var SideBar = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 33
+                  lineNumber: 35
                 }
               },
               'Home'
@@ -96,7 +100,7 @@ var SideBar = function (_Component) {
           _react2.default.createElement(_nativeBase.Right, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 37
             }
           })
         ),
@@ -111,7 +115,7 @@ var SideBar = function (_Component) {
             icon: true, style: _style2.default.links,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 37
+              lineNumber: 39
             }
           },
           _react2.default.createElement(
@@ -119,12 +123,12 @@ var SideBar = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 47
+                lineNumber: 49
               }
             },
             _react2.default.createElement(_nativeBase.Icon, { active: true, name: 'chatboxes', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 48
+                lineNumber: 50
               }
             })
           ),
@@ -133,7 +137,7 @@ var SideBar = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 50
+                lineNumber: 52
               }
             },
             _react2.default.createElement(
@@ -141,7 +145,7 @@ var SideBar = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 51
+                  lineNumber: 53
                 }
               },
               'Blank Page'
@@ -150,7 +154,61 @@ var SideBar = function (_Component) {
           _react2.default.createElement(_nativeBase.Right, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 53
+              lineNumber: 55
+            }
+          })
+        ),
+        _react2.default.createElement(
+          _nativeBase.ListItem,
+          {
+            button: true,
+            onPress: function onPress() {
+              _AppViewStore2.default.drawerOpened = false;
+              _AuthStore2.default.unsetUser();
+            },
+            icon: true, style: _style2.default.links,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 57
+            }
+          },
+          _react2.default.createElement(
+            _nativeBase.Left,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 67
+              }
+            },
+            _react2.default.createElement(_nativeBase.Icon, { active: true, name: 'exit', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 68
+              }
+            })
+          ),
+          _react2.default.createElement(
+            _nativeBase.Body,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 70
+              }
+            },
+            _react2.default.createElement(
+              _nativeBase.Text,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 71
+                }
+              },
+              'Log Out'
+            )
+          ),
+          _react2.default.createElement(_nativeBase.Right, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 73
             }
           })
         )

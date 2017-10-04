@@ -31,6 +31,10 @@ var _blankPage = require('./components/blankPage/');
 
 var _blankPage2 = babelHelpers.interopRequireDefault(_blankPage);
 
+var _contacts = require('./components/contacts/');
+
+var _contacts2 = babelHelpers.interopRequireDefault(_contacts);
+
 var _sideBar = require('./components/sideBar');
 
 var _sideBar2 = babelHelpers.interopRequireDefault(_sideBar);
@@ -38,6 +42,18 @@ var _sideBar2 = babelHelpers.interopRequireDefault(_sideBar);
 var _signup = require('./components/signup');
 
 var _signup2 = babelHelpers.interopRequireDefault(_signup);
+
+var _editCard = require('./components/editCard');
+
+var _editCard2 = babelHelpers.interopRequireDefault(_editCard);
+
+var _settings = require('./components/settings');
+
+var _settings2 = babelHelpers.interopRequireDefault(_settings);
+
+var _profiles = require('./components/profiles');
+
+var _profiles2 = babelHelpers.interopRequireDefault(_profiles);
 
 var _baseTheme = require('./themes/base-theme');
 
@@ -127,7 +143,7 @@ var AppNavigator = (0, _native.observer)(_class = function (_Component) {
           content: _react2.default.createElement(_sideBar2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 80
             }
           }),
           tapToClose: true,
@@ -137,7 +153,7 @@ var AppNavigator = (0, _native.observer)(_class = function (_Component) {
           negotiatePan: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 76
           }
         },
         _react2.default.createElement(_reactNative.StatusBar, {
@@ -145,19 +161,19 @@ var AppNavigator = (0, _native.observer)(_class = function (_Component) {
           barStyle: 'light-content',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 87
           }
         }),
         _AppViewStore2.default.appLoading ? _react2.default.createElement(
           _nativeBase.View,
           { style: { flex: 1, backgroundColor: '#384850' }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 88
+              lineNumber: 92
             }
           },
           _react2.default.createElement(_nativeBase.Spinner, { style: { flex: 1 }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 89
+              lineNumber: 93
             }
           })
         ) : _react2.default.createElement(
@@ -165,39 +181,59 @@ var AppNavigator = (0, _native.observer)(_class = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 92
+              lineNumber: 96
             }
           },
           _react2.default.createElement(
             _reactNativeRouterFlux.Scene,
             { key: 'root', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 93
+                lineNumber: 97
               }
             },
             _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'login', component: _login2.default, hideNavBar: true, initial: !_AuthStore2.default.isLoggedIn ? true : false, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 94
+                lineNumber: 98
               }
             }),
             _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'signup', component: _signup2.default, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 95
+                lineNumber: 99
               }
             }),
             _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'sideBar', component: _sideBar2.default, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 96
+                lineNumber: 100
               }
             }),
             _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'home', component: _home2.default, hideNavBar: true, initial: _AuthStore2.default.isLoggedIn ? true : false, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 101
               }
             }),
             _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'blankPage', component: _blankPage2.default, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 98
+                lineNumber: 102
+              }
+            }),
+            _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'contacts', component: _contacts2.default, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 103
+              }
+            }),
+            _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'profiles', component: _profiles2.default, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 104
+              }
+            }),
+            _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'editCard', component: _editCard2.default, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 105
+              }
+            }),
+            _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'settings', component: _settings2.default, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 106
               }
             })
           )

@@ -9,8 +9,12 @@ import { Drawer, Spinner, View } from 'native-base';
 import Login from './components/login/';
 import Home from './components/home/';
 import BlankPage from './components/blankPage/';
+import Contacts from './components/contacts/';
 import SideBar from './components/sideBar';
 import Signup from './components/signup';
+import EditCard from './components/editCard';
+import Settings from './components/settings';
+import Profiles from './components/profiles';
 import { statusBarColor } from './themes/base-theme';
 import AppViewStore from './stores/ViewStore/AppViewStore.js';
 import AuthStore from './stores/EntityStore/AuthStore.js';
@@ -96,6 +100,10 @@ class AppNavigator extends Component {
               <Scene key="sideBar" component={SideBar} />
               <Scene key="home" component={Home} hideNavBar initial={(AuthStore.isLoggedIn) ? true : false} />
               <Scene key="blankPage" component={BlankPage} />
+              <Scene key="contacts" component={Contacts} />
+              <Scene key="profiles" component={Profiles} />
+              <Scene key="editCard" component={EditCard} />
+              <Scene key="settings" component={Settings} />
             </Scene>
           </Router>}
       </Drawer>
