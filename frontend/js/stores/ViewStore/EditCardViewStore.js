@@ -4,17 +4,16 @@ import validate from 'validate.js';
 import { Actions } from 'react-native-router-flux';
 
 import AuthService from '../../services/AuthService.js';
-import AppViewStore from './AppViewStore.js';
+//import AppViewStore from './AppViewStore.js';
 import UserModel from '../../models/UserModel.js';
 import AuthStore from '../EntityStore/AuthStore.js';
 
 const TOKEN_KEY = '@Token:key';
 
 class EditCardViewStore {
-  @observable email;
   @observable name;
-  @observable password;
-  @observable reTypePassword;
+  @observable email;
+
   @observable isSubmitted=false;
   @observable isSubmitting=false;
   @observable isValid;

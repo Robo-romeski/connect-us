@@ -16,7 +16,7 @@ import ErrorMsg from '../errorMsg';
 const backgroundImage = require('../../../images/glow2.png');
 
 @observer
-class EditCard extends Component { // eslint-disable-line
+class SignUp extends Component { // eslint-disable-line
 
   render() { // eslint-disable-line class-methods-use-this
     const showErrors = !SignUpViewStore.isValid &&
@@ -36,7 +36,7 @@ class EditCard extends Component { // eslint-disable-line
                 </Button>
               </Left>
               <Body>
-                <Title>Edit Card</Title>
+                <Title>Sign Up</Title>
               </Body>
               <Right />
           </Header>
@@ -186,4 +186,4 @@ class EditCard extends Component { // eslint-disable-line
   }
 }
 
-export default EditCard;
+export default SignUp;

@@ -39,15 +39,15 @@ var _errorMsg2 = babelHelpers.interopRequireDefault(_errorMsg);
 
 var backgroundImage = require('../../../images/glow2.png');
 
-var EditCard = (0, _native.observer)(_class = function (_Component) {
-  babelHelpers.inherits(EditCard, _Component);
+var SignUp = (0, _native.observer)(_class = function (_Component) {
+  babelHelpers.inherits(SignUp, _Component);
 
-  function EditCard() {
-    babelHelpers.classCallCheck(this, EditCard);
-    return babelHelpers.possibleConstructorReturn(this, (EditCard.__proto__ || Object.getPrototypeOf(EditCard)).apply(this, arguments));
+  function SignUp() {
+    babelHelpers.classCallCheck(this, SignUp);
+    return babelHelpers.possibleConstructorReturn(this, (SignUp.__proto__ || Object.getPrototypeOf(SignUp)).apply(this, arguments));
   }
 
-  babelHelpers.createClass(EditCard, [{
+  babelHelpers.createClass(SignUp, [{
     key: 'render',
     value: function render() {
       var showErrors = !_SignUpViewStore2.default.isValid && _SignUpViewStore2.default.isSubmitted && _SignUpViewStore2.default.validationErrors;
@@ -117,7 +117,7 @@ var EditCard = (0, _native.observer)(_class = function (_Component) {
                     lineNumber: 39
                   }
                 },
-                'Edit Card'
+                'Sign Up'
               )
             ),
             _react2.default.createElement(_nativeBase.Right, {
@@ -391,7 +391,7 @@ var EditCard = (0, _native.observer)(_class = function (_Component) {
       );
     }
   }]);
-  return EditCard;
+  return SignUp;
 }(_react.Component)) || _class;
 
-exports.default = EditCard;
+exports.default = SignUp;

@@ -11,6 +11,7 @@ const config = require('../../config/env');
  * @returns {*}
  */
 function login(req, res, next) {
+  console.log('yababdabbdoo');
   const userObj = {
     email: req.body.email,
   };

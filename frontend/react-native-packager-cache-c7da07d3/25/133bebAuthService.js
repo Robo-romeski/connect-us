@@ -7,6 +7,7 @@ var _config = require('../config.js');
 var _config2 = babelHelpers.interopRequireDefault(_config);
 
 function login(email, password) {
+  console.log(_config2.default.root + '/auth/login');
   var data = fetch(_config2.default.root + '/auth/login', {
     method: 'POST',
     headers: {

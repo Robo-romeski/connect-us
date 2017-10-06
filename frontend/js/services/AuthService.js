@@ -1,6 +1,7 @@
 import config from '../config.js';
 
 function login(email, password) {
+  console.log(`${config.root}/auth/login`);
   const data = fetch(`${config.root}/auth/login`, {
     method: 'POST',
     headers: {
